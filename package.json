@@ -10,14 +10,18 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:better-keys.helloWorld"
+        "onStartupFinished"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "better-keys.helloWorld",
-				"title": "Hello World"
+				"command": "better-keys.activate",
+				"title": "Enable keybing mode"
+			}, 
+			{
+				"command": "better-keys.deactivate",
+				"title": "Disable keybing mode"
 			}
 		]
 	},
