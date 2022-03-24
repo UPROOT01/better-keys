@@ -17,21 +17,14 @@ export function activate(context: vscode.ExtensionContext) {
 	);
 
 	const activateBKmode = vscode.commands.registerCommand(
-		"better-keys.activate",
+		"better-keys.toggle",
 		(_) => {
-			activated = true;
-		}
-	);
-
-	const deactivateBKmode = vscode.commands.registerCommand(
-		"better-keys.deactivate",
-		(_) => {
-			activated = false;
+			activated = !activated;
+			console.log("Toggled", activated);
 		}
 	);
 
 	context.subscriptions.push(activateBKmode);
-	context.subscriptions.push(deactivateBKmode);
 	context.subscriptions.push(keyPressed);
 }
 

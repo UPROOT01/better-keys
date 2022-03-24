@@ -16,12 +16,14 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "better-keys.activate",
-				"title": "Enable keybing mode"
-			}, 
+				"command": "better-keys.toggle",
+				"title": "Toggle keybing mode"
+			}
+		],
+		"keybindings": [
 			{
-				"command": "better-keys.deactivate",
-				"title": "Disable keybing mode"
+				"command": "better-keys.toggle",
+				"key": "escape"
 			}
 		]
 	},
