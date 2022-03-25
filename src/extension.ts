@@ -22,7 +22,11 @@ export function activate(context: vscode.ExtensionContext) {
 				if (!editor) {
 					console.log("Nothing in focus");
 				} else {
-					selectParethesis(editor);
+					["()", "{}", "[]"].forEach((parenthesis) => {
+						if (parenthesis[1] === e.text) {
+							selectParethesis(editor, parenthesis);
+						}
+					});
 				}
 			}
 		}
